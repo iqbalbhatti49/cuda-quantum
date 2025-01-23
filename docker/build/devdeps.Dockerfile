@@ -51,6 +51,7 @@ ENV ZLIB_INSTALL_PREFIX=/usr/local/zlib
 ENV OPENSSL_INSTALL_PREFIX=/usr/local/openssl
 ENV CURL_INSTALL_PREFIX=/usr/local/curl
 ENV AWS_INSTALL_PREFIX=/usr/local/aws
+ENV DOTNET_EnableWriteXorExecute=0
 
 ## [Build Dependencies]
 RUN apt-get update && apt-get install -y --no-install-recommends \

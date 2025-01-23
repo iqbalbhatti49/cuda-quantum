@@ -318,6 +318,8 @@ jobs:
       - name: Build ${{ needs.metadata.outputs.image_title }} image
         id: docker_build
         uses: docker/build-push-action@v5
+        env:
+          DOTNET_EnableWriteXorExecute: 0
         with:
           context: .
           file: ./docker/${{ needs.metadata.outputs.dockerfile }}
