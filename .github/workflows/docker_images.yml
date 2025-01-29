@@ -302,6 +302,8 @@ jobs:
 
       - name: Set up context for buildx
         run: |
+          echo uname -rv
+          uname -rv
           docker context create builder_context
 
       - name: Set up buildx runner
@@ -506,6 +508,8 @@ jobs:
 
       - name: Set up context for buildx
         run: |
+          echo uname -rv
+          uname -rv
           docker context create builder_context
 
       - name: Set up buildx runner
