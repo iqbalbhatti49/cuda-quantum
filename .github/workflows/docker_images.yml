@@ -308,8 +308,8 @@ jobs:
           sudo apt update
           echo sudo apt-cache policy qemu
           sudo apt-cache policy qemu
-          echo sudo apt upgrade qemu
-          sudo apt upgrade qemu
+          echo sudo apt upgrade -y qemu
+          sudo apt upgrade -y qemu
           echo sudo apt-cache policy qemu
           sudo apt-cache policy qemu
           echo "sudo apt-cache policy qemu | grep Installed"
@@ -529,8 +529,8 @@ jobs:
           sudo apt update
           echo sudo apt-cache policy qemu
           sudo apt-cache policy qemu
-          echo sudo apt upgrade qemu
-          sudo apt upgrade qemu
+          echo sudo apt upgrade -y qemu
+          sudo apt upgrade -y qemu
           echo sudo apt-cache policy qemu
           sudo apt-cache policy qemu
           echo "sudo apt-cache policy qemu | grep Installed"
