@@ -300,6 +300,21 @@ jobs:
             echo "docker_output=type=docker,dest=$tar_archive" >> $GITHUB_OUTPUT
           fi
 
+      - name: Install specific QEMU
+        run: |
+          echo sudo add-apt-repository ppa:mruffell/lp2096782-test-qemu
+          sudo add-apt-repository ppa:mruffell/lp2096782-test-qemu
+          echo sudo apt update
+          sudo apt update
+          echo sudo apt-cache policy qemu
+          sudo apt-cache policy qemu
+          echo sudo apt upgrade qemu
+          sudo apt upgrade qemu
+          echo sudo apt-cache policy qemu
+          sudo apt-cache policy qemu
+          echo "sudo apt-cache policy qemu | grep Installed"
+          sudo apt-cache policy qemu | grep Installed
+
       - name: Set up context for buildx
         run: |
           echo uname -rv
@@ -505,6 +520,21 @@ jobs:
             echo "tar_archive=$tar_archive" >> $GITHUB_OUTPUT
             echo "docker_output=type=docker,dest=$tar_archive" >> $GITHUB_OUTPUT
           fi
+
+      - name: Install specific QEMU
+        run: |
+          echo sudo add-apt-repository ppa:mruffell/lp2096782-test-qemu
+          sudo add-apt-repository ppa:mruffell/lp2096782-test-qemu
+          echo sudo apt update
+          sudo apt update
+          echo sudo apt-cache policy qemu
+          sudo apt-cache policy qemu
+          echo sudo apt upgrade qemu
+          sudo apt upgrade qemu
+          echo sudo apt-cache policy qemu
+          sudo apt-cache policy qemu
+          echo "sudo apt-cache policy qemu | grep Installed"
+          sudo apt-cache policy qemu | grep Installed
 
       - name: Set up context for buildx
         run: |
